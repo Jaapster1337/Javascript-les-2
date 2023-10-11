@@ -16,9 +16,11 @@ const scores = [
 // 66
 // ==========================================
 
+for (let i = 0; i <= scores.length - 1; i++) {
+    console.log(scores[i].score);
+}
 
-
-
+console.log("\n")
 
 // ==========================================
 // Opdracht 1b
@@ -32,9 +34,21 @@ const scores = [
 // D
 // ==========================================
 
+for (let i = 0; i < scores.length; i++) {
+    const score = scores[i].score;
 
-
-
+    if (score < 60) {
+        console.log("F");
+    } else if (score < 70) {
+        console.log("D");
+    } else if (score < 80) {
+        console.log("C");
+    } else if (score < 90) {
+        console.log("B");
+    } else if (score < 100) {
+        console.log("A");
+    }
+}
 
 // ==========================================
 // Opdracht 1c
@@ -49,9 +63,23 @@ const scores = [
 //  ];
 // ==========================================
 
+console.log(scores);
+for (let i = 0; i < scores.length; i++) {
+    const score = scores[i].score;
 
-
-
+    if (score < 60) {
+        scores[i].grade = "F";
+    } else if (score < 70) {
+        scores[i].grade = "D";;
+    } else if (score < 80) {
+        scores[i].grade = "C";;
+    } else if (score < 90) {
+        scores[i].grade = "B";;
+    } else if (score < 100) {
+        scores[i].grade = "A";;
+    }
+}
+console.log(scores)
 
 // ==========================================
 // Opdracht 2
@@ -75,7 +103,13 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
-
+console.log(NOVIEmployees)
+for (let i = 0; i <NOVIEmployees.length ; i++) {
+    const email = NOVIEmployees[i].firstName +"."+ NOVIEmployees[i].lastName+"@novi.nl"
+    //regel hieronder is de bonus opdracht
+    NOVIEmployees[i].email = email.toString().toLowerCase()
+}
+console.log(NOVIEmployees);
 
 
 
@@ -84,7 +118,7 @@ const NOVIEmployees = [
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
-
+//ZIE CODE HIERBOVEN
 
 
 // ==========================================
@@ -118,18 +152,44 @@ const students = [
 // [
 //     { name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborhood: 'Pijlsweerd' },
 //     { name: 'Mehmet', city: 'Utrecht', zipCode: '3514', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Dennis', city: 'Utrecht', zipCode: '3572', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Robin', city: 'Utrecht', zipCode: '3581', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Tanush', city: 'Utrecht', zipCode: '3512', neighborhood: 'Vogelenbuurt' },
+//     { name: 'Dennis', city: 'Utrecht', zipCode: '3572', neighborhood: 'Wittevrouwen' },
+//     { name: 'Robin', city: 'Utrecht', zipCode: '3581', neighborhood: 'Oudwijk' },
+//     { name: 'Tanush', city: 'Utrecht', zipCode: '3512', neighborhood: 'Binnenstad' },
 //     { name: 'Florien', city: 'Utrecht', zipCode: '3513', neighborhood: 'Pijlsweerd' },
-//     { name: 'Larissa', city: 'Utrecht', zipCode: '3583', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Marijn', city: 'Utrecht', zipCode: '3572', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Jan', city: 'Utrecht', zipCode: '3531', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Laura', city: 'Utrecht', zipCode: '3531', neighborhood: 'Vogelenbuurt' },
+//     { name: 'Larissa', city: 'Utrecht', zipCode: '3583', neighborhood: 'Schildersbuurt' },
+//     { name: 'Marijn', city: 'Utrecht', zipCode: '3572', neighborhood: 'Wittevrouwen' },
+//     { name: 'Jan', city: 'Utrecht', zipCode: '3531', neighborhood: 'Lombok' },
+//     { name: 'Laura', city: 'Utrecht', zipCode: '3531', neighborhood: 'Lombok' },
 //     { name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: 'Vogelenbuurt' }
+//     { name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: 'Lombok' }
 // ]
 // ==========================================
 
+for (let i = 0; i < students.length; i++) {
+    switch (students[i].zipCode){
+        case "3513":
+            students[i].neighborhood = "Pijlsweerd";
+            break;
+        case "3514":
+            students[i].neighborhood = "Vogelenbuurt";
+            break;
+        case "3512":
+            students[i].neighborhood = "Binnenstad";
+            break;
+        case "3531":
+            students[i].neighborhood = "Lombok";
+            break;
+        case "3572":
+            students[i].neighborhood = "Wittevrouwen";
+            break;
+        case "3581":
+            students[i].neighborhood = "Oudwijk";
+            break;
+        case "3583":
+            students[i].neighborhood = "Schildersbuurt";
+    }
+}
+
+console.log(students);
 
 

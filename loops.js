@@ -11,9 +11,10 @@
 // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
 
-
-
-
+const star= "*";
+for (let i = 0; i <= 15; i++) {
+    console.log(`${star.repeat(i)}`)
+}
 
 // ==========================================
 // Opdracht 2. Maak een for-loop die 4 keer het woord "loop..." logt, en bij de laatste (vijfde) loop het woord "klaar!"
@@ -25,9 +26,14 @@
 // klaar!
 // ==========================================
 
-
-
-
+for (let i = 0; i <= 4; i++) {
+    if (i < 4){
+        console.log("loop...")
+    }
+    else{
+        console.log("klaar!")
+    }
+}
 
 // ==========================================
 // Opdracht 3: maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
@@ -87,5 +93,28 @@
 // etc.
 // ==========================================
 
+for (let i = 1; i < 31; i++) {
 
+    let outcome = ""
+    let divideBy3 = false
+    let divideBy5 = false
+    if (i%3===0) {
+        divideBy3 = true
+    }
+    if (i%5===0) {
+        divideBy5 = true
+    }
+
+    if (divideBy3 === true) {
+        outcome += "Fizz"
+    }
+    if (divideBy5 === true) {
+        outcome += "Buzz"
+    }
+    if (divideBy3 === false && divideBy5 === false) {
+        outcome += i
+    }
+    console.log(outcome)
+
+}
 
